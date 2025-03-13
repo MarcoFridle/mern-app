@@ -15,7 +15,7 @@ recordRoutes.route("/employee").get(async function (req, res) {
 })
 
 // This section will help you get a single record by id
-recordRoutes.route("/update/:id").get(async function (req, res) {
+recordRoutes.route("/employee/:id").get(async function (req, res) {
     const db_connect = dbo.getDb()
     const myquery = { _id: new ObjectId(req.params.id) }
     try {
@@ -44,7 +44,7 @@ recordRoutes.route("/employee/add").post(async function (req, res) {
 })
 
 // This section will help you update a record by id.
-recordRoutes.route("/update/:id").post(async function (req, res) {
+recordRoutes.route("/update/:id").put(async function (req, res) {
     const db_connect = dbo.getDb()
     const myquery = { _id: new ObjectId(req.params.id) }
     const newvalues = {
