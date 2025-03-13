@@ -11,7 +11,7 @@
     "prestart": "npm run lint && npm run test",
     "predev": "npm run lint && npm run test",
     "postinstall": "npm run build",
-    "setup": "npm install",
+    "build": "npm install",
     "watch": "webpack --watch"
   },
   "keywords": [],
